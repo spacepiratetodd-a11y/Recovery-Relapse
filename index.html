@@ -73,8 +73,16 @@
         <input type="text" id="lname" name="lastname" placeholder="Your last initial..">
       </div>
     </div>
-    #Onclick function to save data to local storage
     <button onclick="saveData()"><a href="cleandate.html">One Day At A Time</button>
   </div>
+  <script>
+  function saveData() {
+    let fname = document.getElementById("fname").value;
+    localStorage.setItem("fname", name);
+    let lname = document.getElementById("lname").value;
+    localStorage.setItem("lname", lastInitial);
+  }
+</script>
+
 </body>
 </html>

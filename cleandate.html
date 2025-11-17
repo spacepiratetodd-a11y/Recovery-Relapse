@@ -2,78 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Together We Can</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Wellness App</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    :root {
+      --primary-color: #4CAF50;
+      --accent-color: #f0f8ff;
+      --font-family: 'Segoe UI', sans-serif;
     }
+
     body {
-      font-family: 'Inter', sans-serif;
-      background: #f9f9f9;
+      margin: 0;
+      font-family: var(--font-family);
+      background-color: var(--accent-color);
       color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      line-height: 1.6;
     }
-    .container {
-      background: white;
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      max-width: 600px;
-      width: 100%;
+
+    header, footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 1rem;
       text-align: center;
     }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+
+    main {
+      padding: 1rem;
+      max-width: 800px;
+      margin: auto;
     }
-    p {
-      font-size: 1rem;
-      color: #666;
-    }
-    button {
-      margin-top: 30px;
-      padding: 12px 24px;
-      font-size: 1rem;
-      border: none;
+
+    .card {
+      background: white;
       border-radius: 8px;
-      background-color: #0077cc;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    button {
+      background-color: var(--primary-color);
       color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
       cursor: pointer;
     }
-    button:hover {
-      background-color: #005fa3;
+
+    button:focus {
+      outline: 2px solid #000;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Hey</h1>
-<p>Let's get to know each other a little better</p>
-  <form action="/action_page.php">
-    <div class="row">
-      <div class="col-25">
-        <label for="fname"><strong>First Name</strong></label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="lname"><strong>Last Initial</strong></label>
-      </div>
-      <div class="col-75">
-        <input type="text" id="lname" name="lastname" placeholder="Your last initial..">
-      </div>
-    </div>
-    <button onclick="alert('Let’s build something awesome!')">Get Started</button>
-  </div>
+
+  <header>
+    <h1>Welcome to Your Wellness Space</h1>
+    <p>Empowering Affirmations and Clean Date Calculator</p>
+  </header>
+
+  <main>
+    <section class="card" aria-label="Clean Date Tracker">
+      <h2>Track Your Clean Date</h2>
+      <input type="date" id="cleanDate" aria-label="Enter your clean date">
+      <button onclick="saveDate()">Save Date</button>
+    </section>
+
+    <section class="card" aria-label="Daily Affirmation">
+      <h2>Today's Affirmation</h2>
+      <p id="affirmation">You are strong, and your journey matters.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 BaddFoxx LLC • <a href="#" style="color:white;">Accessibility</a></p>
+  </footer>
+
+  <script>
+    function saveDate() {
+      const date = document.getElementById("cleanDate").value;
+      localStorage.setItem("cleanDate", date);
+      alert("Clean date saved!");
+    }
+
+    // Optional: Load saved date
+    window.onload = () => {
+      const savedDate = localStorage.getItem("cleanDate");
+      if (savedDate) {
+        document.getElementById("cleanDate").value = savedDate;
+      }
+    };
+  </script>
+
 </body>
 </html>
