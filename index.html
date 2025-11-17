@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Your Project Title</title>
+  <title>We Do Recover</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -19,6 +19,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+}
     }
     .container {
       background: white;
@@ -54,8 +55,25 @@
 </head>
 <body>
   <div class="container">
-    <h1>Welcome to Your App</h1>
-    <p>This is a blank canvas. Add your clean date tracker, mood selector, or Relapse Rescue features here.</p>
+    <h1>Welcome</h1>
+<p>Let's get to know each other a little better</p>
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname"><strong>First Name</strong></label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname"><strong>Last Initial</strong></label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last initial..">
+      </div>
+    </div>
     <button onclick="alert('Let’s build something awesome!')">Get Started</button>
   </div>
 </body>
