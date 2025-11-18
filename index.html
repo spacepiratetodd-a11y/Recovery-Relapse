@@ -6,7 +6,7 @@
   <title>Your Wellness App</title>
   <style>
     :root {
-      --primary-color: #4CAF50;
+      --primary-color: #500000;
       --accent-color: #f0f8ff;
       --font-family: 'Segoe UI', sans-serif;
     }
@@ -69,10 +69,48 @@
 
   <main>
     <section class="card" aria-label="Clean Date Tracker">
-      <h2>Track Your Clean Date</h2>
-      <input type="date" id="cleanDate" aria-label="Enter your clean date">
-      <button onclick="saveDate()">Save Date</button>
-    </section>
+  <h2>One Day At A Time</h2>
+  <input type="date" id="cleanDate" aria-label="Enter your clean date">
+  <button onclick="calculateDuration()">Calculate Clean Time</button>
+  <p id="result" aria-live="polite"></p>
+</section>
+
+<script>
+  function calculateDuration() {
+    const input = document.getElementById("cleanDate").value;
+    const result = document.getElementById("result");
+
+    if (!input) {
+      result.textContent = "Please select a date.";
+      return;
+    }
+
+    const cleanDate = new Date(input);
+    const today = new Date();
+
+    if (cleanDate > today) {
+      result.textContent = "That date is in the future. Please select a past date.";
+      return;
+    }
+
+    let years = today.getFullYear() - cleanDate.getFullYear();
+    let months = today.getMonth() - cleanDate.getMonth();
+    let days = today.getDate() - cleanDate.getDate();
+
+    if (days < 0) {
+      months -= 1;
+      const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+      days += prevMonth.getDate();
+    }
+
+    if (months < 0) {
+      years -= 1;
+      months += 12;
+    }
+
+    result.textContent = `You've been clean for ${years} year${years !== 1 ? "s" : ""}, ${months} month${months !== 1 ? "s" : ""}, and ${days} day${days !== 1 ? "s" : ""}.`;
+  }
+</script>
 
     <section class="card" aria-label="Daily Affirmation">
       <h2>Today's Affirmation</h2>
