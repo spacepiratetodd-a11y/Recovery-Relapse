@@ -75,7 +75,9 @@
   <p id="result" aria-live="polite"></p>
 </section>
 
+//This is the JS section, had to look up how to do each part, similar to python operations.
 <script>
+  // JavaScript function to calculate duration, Defining the function
   function calculateDuration() {
     const input = document.getElementById("cleanDate").value;
     const result = document.getElementById("result");
@@ -84,8 +86,9 @@
       result.textContent = "Please select a date.";
       return;
     }
-
+    // Creating an input for the date you go clean
     const cleanDate = new Date(input);
+    // How to get today's date
     const today = new Date();
 
     if (cleanDate > today) {
@@ -113,7 +116,8 @@
 </script>
 
     <section class="card" aria-label="Daily Affirmation">
-      <h2>You are strong, and your journey matters.</h2>
+      <h2>You are strong! Your journey matters!</h2>
+      <p><button><a href='list.html'>How are you feeling today?</p>
       
     </section>
   </main>
