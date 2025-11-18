@@ -113,30 +113,14 @@
 </script>
 
     <section class="card" aria-label="Daily Affirmation">
-      <h2>Today's Affirmation</h2>
-      <p id="affirmation">You are strong, and your journey matters.</p>
+      <h2>You are strong, and your journey matters.</h2>
+      
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 BaddFoxx LLC • <a href="#" style="color:white;">Accessibility</a></p>
   </footer>
-
-  <script>
-    function saveDate() {
-      const date = document.getElementById("cleanDate").value;
-      localStorage.setItem("cleanDate", date);
-      alert("Clean date saved!");
-    }
-
-    // Optional: Load saved date
-    window.onload = () => {
-      const savedDate = localStorage.getItem("cleanDate");
-      if (savedDate) {
-        document.getElementById("cleanDate").value = savedDate;
-      }
-    };
-  </script>
 
 </body>
 </html>
