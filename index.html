@@ -86,16 +86,16 @@
       result.textContent = "Please select a date.";
       return;
     }
-    // Creating an input for the date you go clean
+    // Creating an input for the date you got clean
     const cleanDate = new Date(input);
     // How to get today's date
     const today = new Date();
-
+    //Conditional if statement to keep the date logical
     if (cleanDate > today) {
       result.textContent = "That date is in the future. Please select a past date.";
       return;
     }
-
+    //Using operators to calculate the difference
     let years = today.getFullYear() - cleanDate.getFullYear();
     let months = today.getMonth() - cleanDate.getMonth();
     let days = today.getDate() - cleanDate.getDate();
@@ -117,7 +117,7 @@
 
     <section class="card" aria-label="Daily Affirmation">
       <h2>You are strong! Your journey matters!</h2>
-      <p><button><a href='list.html'>How are you feeling today?</p>
+      <p><button><a href='feelingswheel.html'>How are you feeling today?</p>
       
     </section>
   </main>
