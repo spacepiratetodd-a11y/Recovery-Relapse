@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <title>Your Wellness App</title>
   <style>
     :root {
@@ -67,6 +69,22 @@
     <p>Empowering Affirmations and Clean Date Calculator</p>
   </header>
 
+  <nav class="navbar navbar-expand-sm bg-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 3</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
   <main>
     <section class="card" aria-label="Clean Date Tracker">
   <h2>One Day At A Time</h2>
@@ -75,7 +93,7 @@
   <p id="result" aria-live="polite"></p>
 </section>
 
-//This is the JS section, had to look up how to do each part, similar to python operations.
+<!--This is the JS section, had to look up how to do each part, similar to python operations.-->
 <script>
   // JavaScript function to calculate duration, Defining the function
   function calculateDuration() {
@@ -117,7 +135,7 @@
 
     <section class="card" aria-label="Daily Affirmation">
       <h2>You are strong! Your journey matters!</h2>
-      <p><button><a href='feelingswheel.html'>How are you feeling today?</p>
+      <p><button onclick="#">How are you feeling today?</p>
       
     </section>
   </main>
