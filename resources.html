@@ -16,7 +16,10 @@
     body {
       margin: 0;
       font-family: var(--font-family);
-      background-color: var(--accent-color);
+      background-image: url('1764533702896.jpg');
+      background-size: cover;       /* fills screen, crops if needed */
+      background-repeat: no-repeat; /* prevents tiling */
+
       color: #333;
       line-height: 1.6;
     }
@@ -27,6 +30,17 @@
       padding: 1rem;
       text-align: center;
     }
+    footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #50000;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
 
     main {
       padding: 1rem;
@@ -102,7 +116,7 @@ ul li a:hover {
   </header>
 
   <main>
-    
+
 <section class="card" aria-label="NA Resources">
       <h2><strong>NAWS</strong></h2>
       <p><a href="https://na.org/">NA World Services for those who would benefit from 12 step programs</a></p>
