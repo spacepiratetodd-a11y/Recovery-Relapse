@@ -66,21 +66,24 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
+  overflow: hidden;
+  background-color: #f0f8ff;
 }
 
-li a {
+ul li {
+  float: left;
+}
+
+ul li a {
   display: block;
-  color: black;
-  padding: 8px 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
 }
 
-/* Change the link and background color on hover */
-li a:hover {
-  background-color: #555555;
-  color: white;
+ul li a:hover {
+  background-color: #111111;
 }
 </style>
 </head>
@@ -88,10 +91,11 @@ li a:hover {
 <body>
   <header>
     <h1>Your Wellness App</h1>
-  </header>
 
-  <ul>
+<ul>
   <li><a href="index.html">🏡Home</a></li>
   <li><a href="resources.html">🤝Resources</a></li>
   <li><a href="feelingswheel.html">💖Exploration of Feelings</a></li>
 </ul> 
+
+  </header>

@@ -66,21 +66,24 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
+  overflow: hidden;
+  background-color: #f0f8ff;
 }
 
-li a {
+ul li {
+  float: left;
+}
+
+ul li a {
   display: block;
-  color: black;
-  padding: 8px 16px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
 }
 
-/* Change the link and background color on hover */
-li a:hover {
-  background-color: #555555;
-  color: white;
+ul li a:hover {
+  background-color: #500000;
 }
 </style>
 </head>
@@ -101,6 +104,12 @@ li a:hover {
 
 
   <main>
+        <section class="card" aria-label="Daily Affirmation">
+      <h2>You are strong! Your journey matters!</h2>
+      <p>Tracking your clean date helps you celebrate milestones and see the progress you’ve worked hard for. Monitoring your feelings alongside it builds awareness, helping you recognize patterns and stay grounded in your recovery journey.</p>
+      
+    </section>
+    
     <section class="card" aria-label="Clean Date Tracker">
   <h2>One Day At A Time</h2>
   <input type="date" id="cleanDate" aria-label="Enter your clean date">
@@ -109,11 +118,11 @@ li a:hover {
   <p id="result" aria-live="polite"></p>
 </section>
 
-<!--This is the JS section, had to look up how to do each part, similar to python operations.-->
+<!--This is the JS section, had to look up how to do each part, similar to python operations -->
 <script>
   // JavaScript function to calculate duration, Defining the function
   function calculateDuration() {
-    //const = declaring a constant
+    //const = declaring a constant, the value will not change
     const input = document.getElementById("cleanDate").value;
     const result = document.getElementById("result");
 
@@ -127,7 +136,9 @@ li a:hover {
     const today = new Date();
     //Conditional if statement to keep the date logical
     if (cleanDate > today) {
+    //.textContent is how you display text in JS  
       result.textContent = "That date is in the future. Please select a past date.";
+    //JS uses the element return instead of else as in python
       return;
     }
     //Using math operators to calculate the difference, elements getFullYear, getMonth, getDate are
@@ -151,15 +162,11 @@ li a:hover {
   }
 </script>
 
-    <section class="card" aria-label="Daily Affirmation">
-      <h2>You are strong! Your journey matters!</h2>
-      <p><button onclick="#">How are you feeling today?</p>
-      
-    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 BaddFoxx LLC • <a href="#" style="color:white;">Accessibility</a></p>
+  <!-- JS in the footer to hopefully automatically update the year -->
+    <p>&copy; 2025 BaddFoxx LLC • <a href="https://www.baddfoxx.com" style="color:white;">Accessibility</a></p>
   </footer>
 
 </body>
