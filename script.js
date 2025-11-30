@@ -1,10 +1,11 @@
+//created script.js to call from affirmations.js, this was complicated and took a while to figure out how to import/export
 import { affirmations } from './affirmations.js';
 
 function getRandomItem(list) {
   const randomIndex = Math.floor(Math.random() * list.length);
   return list[randomIndex];
 }
-// 2. Toast function (put this near the top, after utilities)
+//Toast function
 function showToast(message) {
   const toast = document.getElementById("toast");
   toast.textContent = message;
@@ -14,10 +15,10 @@ function showToast(message) {
   }, 10000); // disappears after 10s
 }
 
-// 3. Event listeners for your image map areas
+//Event listeners for your image map areas
 document.querySelectorAll("area").forEach(area => {
   area.addEventListener("click", (event) => {
-    event.preventDefault(); // stops the link jump
+    event.preventDefault(); // stops the link jump I was having a problem with
     const feeling = area.dataset.feeling;
     const list = affirmations[feeling];
 
