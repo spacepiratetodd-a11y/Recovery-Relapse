@@ -20,7 +20,7 @@ function showToast(message) {//display the toast message
 //Event listeners for your image map areas
 document.querySelectorAll("area").forEach(area => {//select all area elements and loop through them
   area.addEventListener("click", (event) => {//add a click event listener to each area
-    event.preventDefault(); // stops the link jump I was having a problem with and allows the toast to be called on by the data-feeling="" clicked on the feelingswheel.html page
+    event.preventDefault(); //stops the link jump I was having a problem with and allows the toast to be called on by the data-feeling="" clicked on the feelingswheel.html page
     const feeling = area.dataset.feeling;//get the feeling from the data-feeling attribute of the clicked area
     const list = affirmations[feeling];//get the corresponding list of affirmations from the imported affirmations object
 
