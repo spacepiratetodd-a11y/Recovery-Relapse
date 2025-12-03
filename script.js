@@ -2,6 +2,7 @@
 import { affirmations } from './affirmations.js';
 
 function getRandomItem(list) {
+  //borrowed the Math.floor element to multiply a random number by the length of the list to get a random item from the corresponding index
   const randomIndex = Math.floor(Math.random() * list.length);
   return list[randomIndex];
 }
