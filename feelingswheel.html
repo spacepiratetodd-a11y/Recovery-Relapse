@@ -111,7 +111,7 @@ ul li a:hover {
   animation: fadein 0.5s, fadeout 0.5s 10.5s;
 }
 
-@keyframes fadein {
+@keyframes fadein { /*fade in animation for the toast*/
   from {bottom: 0; opacity: 0;}
   to {bottom: 0; opacity: 1;}
 }
@@ -171,6 +171,7 @@ ul li a:hover {
     <area target="_blank" alt="Guilty" title="Guilty" href="" coords="669,908,651,1138,719,1138,701,909" shape="poly">
     <area target="_blank" alt="Depressed" title="Depressed" href="" coords="704,909,721,1136,787,1128,733,903" shape="poly">
     <area target="_blank" alt="Hurt" title="Hurt" href="" coords="737,902,790,1127,852,1108,766,893" shape="poly">
+    <!--adding the data-feeling="sad" element to the area links the click to pull from the affirmations.js list for sad-->
     <area target="_blank" alt="Sad" title="Sad" href="#" coords="655,746,666,750,679,753,691,752,708,751,762,888,735,895,708,899,677,900,640,895,604,885,578,872" shape="poly" data-feeling="sad">
     <area target="_blank" alt="Hesitant" title="Hesitant" href="" coords="863,1109,886,1098,984,1294,945,1314" shape="poly">
     <area target="_blank" alt="Horrified" title="Horrified" href="" coords="891,1097,917,1083,1029,1269,988,1292" shape="poly">
@@ -285,7 +286,7 @@ ul li a:hover {
     <area target="_blank" alt="Happy" title="Happy" href="" coords="569,868,543,847,516,819,488,773,474,736,468,692,472,646,480,616,618,666,618,692,629,723,647,744" shape="poly" data-feeling="happy">
 </map>
 
-
+<!--runs the script.js I created for this page, had to add type="module" to get it to work properly, running script src="script.js" without the module was preventing the code from running-->
 <script type="module" src="script.js"></script>
 
   <footer>
